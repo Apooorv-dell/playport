@@ -1,9 +1,16 @@
 import { useState, useEffect } from "react";
 import apiClient, { CanceledError } from "../services/api-client";
 
-interface Game {
+// interface Platform {
+//   id: number;
+//   name: string;
+//   slug: string;
+// }
+export interface Game {
   id: number;
   name: string;
+  background_image: string;
+  //   parent_platforms: { platform: Platform }[];
 }
 
 interface FetchGamesResponse {
@@ -25,7 +32,7 @@ const useGames = () => {
         console.log(res);
       })
       .catch((err) => {
-        if(err instanceof  CanceledError) return ;
+        if (err instanceof CanceledError) return;
         setError(err.message);
       });
     return () => controller.abort();
