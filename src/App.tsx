@@ -15,7 +15,7 @@ function App() {
           <NavBar />
         </GridItem>
         <Show above="lg">
-          <GridItem area="aside" bg=" grey">
+          <GridItem area="aside" bg=" grey" margin='10px'>
             side
           </GridItem>
         </Show>
