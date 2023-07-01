@@ -13,7 +13,7 @@ const GamesGrid = () => {
         sm:1,
         md:2,
         lg:3,
-        xl:5
+        xl:4,
       }} spacing={10} padding={10}>
         {games.map((game) => (
           <GameCard key={game.id} game={game} />
