@@ -10,7 +10,7 @@ import { MdPhoneIphone } from "react-icons/md";
 import { SiNintendo } from "react-icons/si";
 import { BsGlobe } from "react-icons/bs";
 
-import { Icon,HStack } from "@chakra-ui/react";
+import { Icon, HStack } from "@chakra-ui/react";
 import { Platform } from "../hooks/useGames";
 import { IconType } from "react-icons";
 
@@ -19,7 +19,7 @@ interface Props {
 }
 
 const PlatformIconList = ({ platforms }: Props) => {
-  const iconMap:{[key:string]:IconType} = {
+  const iconMap: { [key: string]: IconType } = {
     pc: FaWindows,
     playstation: FaPlaystation,
     xbox: FaXbox,
@@ -30,11 +30,18 @@ const PlatformIconList = ({ platforms }: Props) => {
     ios: MdPhoneIphone,
     web: BsGlobe,
   };
+
   return (
     <>
       <HStack>
         {platforms.map((platform) => (
-                  <Icon as={iconMap[platform.slug]}  marginTop={1} marginRight={2}color='gray.500'/>
+          <Icon key={platform.id}
+            as={iconMap[platform.slug]}
+
+            marginTop={1}
+            marginRight={2}
+            color="gray.500"
+          />
         ))}
       </HStack>
     </>
