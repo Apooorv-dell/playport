@@ -1,6 +1,7 @@
 import { HStack, Image, List, ListItem, Button, Spinner,Heading } from "@chakra-ui/react";
-import useGenre, {Genre} from "../hooks/useGenres";
+import useGenre, {Genre} from "../hooks/useGenres"
 import getCroppedImaegUrl from "../services/image-url";
+
 
 
 interface Props{
