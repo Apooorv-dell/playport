@@ -1,4 +1,5 @@
 const getCroppedImaegUrl =  (url:string)=>{
+    if(!url) return ''
     const target = 'media/'
  
 const index = url.indexOf(target) + target.length
