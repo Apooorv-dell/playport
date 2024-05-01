@@ -1,4 +1,6 @@
 import { Badge } from "@chakra-ui/react";
+import { useEffect } from "react";
+
 
 interface Props {
   score: number;
@@ -6,6 +8,11 @@ interface Props {
 
 const CriticScore = ({ score }: Props) => {
   let color = score > 75 ? "green" : score > 60 ? "yellow" : "";
+useEffect(()=>{
+
+  
+},[])
+ 
   return (
     <>
       <Badge
