@@ -12,7 +12,7 @@ import {
   Icon,
   HStack,
   Link,
-  VStack,
+
 } from "@chakra-ui/react";
 import PlatformIconList from "./PlatformIconList";
 
